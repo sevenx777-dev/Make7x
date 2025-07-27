@@ -90,6 +90,14 @@
             margin-bottom: 15px;
         }
 
+        .download-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
         .download-link {
             display: inline-block;
             background: linear-gradient(45deg, #00c853, #009624);
@@ -98,7 +106,6 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            margin: 15px 0;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
         }
@@ -106,6 +113,15 @@
         .download-link:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 200, 83, 0.5);
+        }
+
+        .patch-download {
+            background: linear-gradient(45deg, #2962ff, #0039cb);
+            box-shadow: 0 5px 15px rgba(41, 98, 255, 0.3);
+        }
+
+        .patch-download:hover {
+            box-shadow: 0 8px 20px rgba(41, 98, 255, 0.5);
         }
 
         .year-badge {
@@ -271,6 +287,11 @@
                 width: 120px;
                 height: 50px;
             }
+            
+            .download-links {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -287,7 +308,10 @@
             </div>
             <h1>⚽ Patchs MakeFoot</h1>
             <p class="subtitle">Coleção Completa de Times</p>
-            <a href="https://makefoot.com.br/" class="download-link" target="_blank">📥 Baixar Jogo MakeFoot</a>
+            <div class="download-links">
+                <a href="https://makefoot.com.br/" class="download-link" target="_blank">📥 Baixar Jogo MakeFoot</a>
+                <a href="https://makefoot.com.br/versions/2025/patches/times/make7x-2011-250609.zip" class="download-link patch-download" target="_blank">📦 Baixar Patchs Make7x 2011</a>
+            </div>
             <div>
                 <div class="year-badge">Make7x 2008 - Inglaterra</div>
                 <div class="year-badge">Make7x 2011 - Brasil</div>
