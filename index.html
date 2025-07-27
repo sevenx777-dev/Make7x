@@ -91,6 +91,32 @@
             margin-bottom: 15px;
         }
 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(131, 58, 180, 0.3);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(131, 58, 180, 0.5);
+        }
+
         .download-links {
             display: flex;
             justify-content: center;
@@ -289,7 +315,7 @@
                 height: 50px;
             }
             
-            .download-links {
+            .download-links, .social-links {
                 flex-direction: column;
                 align-items: center;
             }
@@ -309,6 +335,9 @@
             </div>
             <h1>⚽ Patchs MakeFoot</h1>
             <p class="subtitle">Coleção Completa de Times</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/make7x/" class="social-link" target="_blank">📸 Instagram Make7x</a>
+            </div>
             <div class="download-links">
                 <a href="https://makefoot.com.br/" class="download-link" target="_blank">📥 Baixar Jogo MakeFoot</a>
                 <a href="https://makefoot.com.br/versions/2025/patches/times/make7x-2011-250609.zip" class="download-link patch-download" target="_blank">📦 Baixar Patchs Make7x 2011</a>
