@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patchs MakeFoot - Coleção Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .mascot-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ffd700;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .mascot-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sevenx-logo {
+            width: 150px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff8c00, #ffd700);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #000;
+            font-size: 1.5rem;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(to right, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .download-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #00c853, #009624);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+        }
+
+        .download-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 200, 83, 0.5);
+        }
+
+        .year-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff8c00, #ffd700);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 10px 5px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #ffd700;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .league-info {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .patchs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .patch-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .patch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .patch-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .patch-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .patch-info {
+            padding: 20px;
+        }
+
+        .team-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .team-league {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        .patch-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+
+        .detail-value {
+            font-weight: bold;
+            color: #ff8c00;
+        }
+
+        .collection-stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .patchs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .collection-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mascot-image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .sevenx-logo {
+                width: 120px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="mascot-image">
+                    <img src="https://makefoot.com.br/wp-content/uploads/2023/12/mascot.webp" alt="Mascote MakeFoot">
+                </div>
+                <div class="sevenx-logo">
+                    EQUIPE SEVENX
+                </div>
+            </div>
+            <h1>⚽ Patchs MakeFoot</h1>
+            <p class="subtitle">Coleção Completa de Times</p>
+            <a href="https://makefoot.com.br/" class="download-link" target="_blank">📥 Baixar Jogo MakeFoot</a>
+            <div>
+                <div class="year-badge">Make7x 2008 - Inglaterra</div>
+                <div class="year-badge">Make7x 2011 - Brasil</div>
+                <div class="year-badge">Make7x 2011 - Espanha</div>
+            </div>
+        </header>
+
+        <div class="collection-stats">
+            <div class="stat-item">
+                <h3>172</h3>
+                <p>Times Colecionados</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Patchs Originais</p>
+            </div>
+            <div class="stat-item">
+                <h3>3</h3>
+                <p>Temporadas</p>
+            </div>
+        </div>
+
+        <!-- Make7x 2008 - Inglaterra -->
+        <h2 class="section-title">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Make7x 2008 - Premier League</h2>
+        <p class="league-info">Campeonato Inglês de 2008 - 44 times</p>
+        <div class="patchs-grid">
+            <!-- Manchester United -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder">MU</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Manchester United</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chelsea -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #034694, #FFFFFF);">CH</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Chelsea</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arsenal -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #EF0107, #FFFFFF);">AR</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Arsenal</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liverpool -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #C8102E, #00B2A9);">LI</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Liverpool</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tottenham -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #132257, #FFFFFF);">TH</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Tottenham</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manchester City -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #6CABDD, #1C2C5B);">MC</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Manchester City</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Everton -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #003399, #FFFFFF);">EV</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Everton</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- West Ham -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #7A263A, #1BB1E7);">WH</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">West Ham</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aston Villa -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #670E36, #95BFE5);">AV</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Aston Villa</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newcastle -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #241F20, #FFFFFF);">NU</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Newcastle</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middlesbrough -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #E60023, #FFFFFF);">MI</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Middlesbrough</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sunderland -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #EB172B, #FFFFFF);">SU</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Sunderland</h3>
+                    <p class="team-league">Premier League</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2008</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Make7x 2011 - Brasil -->
+        <h2 class="section-title">🇧🇷 Make7x 2011 - Campeonato Brasileiro</h2>
+        <p class="league-info">Campeonato Brasileiro de 2011 - 84 times</p>
+        <div class="patchs-grid">
+            <!-- Corinthians -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000000, #FFFFFF);">COR</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Corinthians</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flamengo -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #E53935, #000000);">FLA</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Flamengo</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- São Paulo -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #D2042D, #FFFFFF);">SP</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">São Paulo</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Palmeiras -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #009C3B, #000000);">PAL</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Palmeiras</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Santos -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #FFFFFF, #000000);">SAN</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Santos</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cruzeiro -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #214499, #FFFFFF);">CRU</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Cruzeiro</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grêmio -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000000, #FFFFFF);">GRE</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Grêmio</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internacional -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #E31717, #FFFFFF);">INT</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Internacional</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atlético Mineiro -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000000, #FFFFFF);">CAM</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Atlético Mineiro</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botafogo -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000000, #FFFFFF);">BOT</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Botafogo</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fluminense -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #8E24AA, #FFFFFF);">FLU</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Fluminense</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vasco -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000000, #FFFFFF);">VAS</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Vasco</h3>
+                    <p class="team-league">Campeonato Brasileiro</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Make7x 2011 - Espanha -->
+        <h2 class="section-title">🇪🇸 Make7x 2011 - La Liga</h2>
+        <p class="league-info">Campeonato Espanhol de 2011 - 44 times</p>
+        <div class="patchs-grid">
+            <!-- Barcelona -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #004D99, #990000);">BAR</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Barcelona</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Madrid -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #FFFFFF, #FEBE10);">RMA</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Real Madrid</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atlético de Madrid -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #E30613, #FFFFFF);">ATM</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Atlético de Madrid</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valencia -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #FF7300, #000000);">VAL</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Valencia</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sevilla -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #FFD700, #191970);">SEV</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Sevilla</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Villarreal -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #FFD700, #0055FF);">VIL</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Villarreal</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Athletic Bilbao -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #FF0000, #FFFFFF);">BIL</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Athletic Bilbao</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Betis -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #009540, #FFFFFF);">BET</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Real Betis</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Sociedad -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000000, #FFFFFF);">SOC</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Real Sociedad</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getafe -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #003366, #FFFFFF);">GET</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Getafe</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Espanyol -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #000066, #FFFFFF);">ESP</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Espanyol</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deportivo La Coruña -->
+            <div class="patch-card">
+                <div class="patch-image">
+                    <div class="patch-image-placeholder" style="background: linear-gradient(45deg, #0066CC, #FFFFFF);">DEP</div>
+                </div>
+                <div class="patch-info">
+                    <h3 class="team-name">Deportivo La Coruña</h3>
+                    <p class="team-league">La Liga</p>
+                    <div class="patch-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Ano</div>
+                            <div class="detail-value">2011</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value">Make7x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Coleção de Patchs MakeFoot - Times Ingleses 2008 | Times Brasileiros 2011 | Times Espanhóis 2011</p>
+            <p>Equipe SevenX - Todos os patchs são originais das temporadas respectivas</p>
+            <p>Total: 172 patchs colecionados</p>
+        </footer>
+    </div>
+</body>
+</html>
