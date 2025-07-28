@@ -37,9 +37,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
             margin-bottom: 20px;
+        }
+        
+        .top-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
             flex-wrap: wrap;
+        }
+        
+        .makefoot-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff0000;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+            background: linear-gradient(to right, #ff0000, #ff4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .mascot-image {
             width: 80px;
@@ -55,8 +74,6 @@
             object-fit: cover;
         }
         .sevenx-logo {
-            width: 120px;
-            height: 50px;
             background: linear-gradient(45deg, #ff0000, #cc0000);
             border-radius: 15px;
             display: flex;
@@ -67,6 +84,7 @@
             font-size: 1.3rem;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
         }
         h1 {
             font-size: 2.2rem;
@@ -281,10 +299,18 @@
                 height: 70px;
             }
             
+            .top-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .makefoot-text {
+                font-size: 1.5rem;
+            }
+            
             .sevenx-logo {
-                width: 100px;
-                height: 45px;
                 font-size: 1.1rem;
+                padding: 8px 16px;
             }
             
             h1 {
@@ -362,10 +388,13 @@
                 height: 60px;
             }
             
+            .makefoot-text {
+                font-size: 1.2rem;
+            }
+            
             .sevenx-logo {
-                width: 90px;
-                height: 40px;
                 font-size: 1rem;
+                padding: 6px 12px;
             }
             
             .year-badge {
@@ -413,10 +442,13 @@
                 height: 100px;
             }
             
+            .makefoot-text {
+                font-size: 1.8rem;
+            }
+            
             .sevenx-logo {
-                width: 150px;
-                height: 60px;
                 font-size: 1.5rem;
+                padding: 12px 24px;
             }
         }
     </style>
@@ -425,11 +457,14 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <div class="mascot-image">
-                    <img src="https://makefoot.com.br/wp-content/uploads/2023/12/mascot.webp" alt="Mascote MakeFoot">
+                <div class="top-section">
+                    <div class="mascot-image">
+                        <img src="https://makefoot.com.br/wp-content/uploads/2023/12/mascot.webp" alt="Mascote MakeFoot">
+                    </div>
+                    <div class="makefoot-text">MakeFoot</div>
                 </div>
                 <div class="sevenx-logo">
-                    SEVENX
+                    TEAM SEVENX
                 </div>
             </div>
             <h1>⚽ Patchs MakeFoot</h1>
